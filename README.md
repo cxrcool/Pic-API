@@ -3,7 +3,8 @@
 ## 使用
 - 下载源码放入网站根目录，访问[域名]即可
 - API地址为`[域名]/img.php`
-- 添加更多API，复制`img.php`更改文件名即可
+- 添加更多API，复制`img.php`更改文件名即可（API会自动创建同名图片库及统计文件）
+- API调用图片直接修改API同名图片库里的图片链接即可
 ## 预览
 预览网站：https://api.cxr.cool
 ![image](https://user-images.githubusercontent.com/93246862/187047087-233c2e0e-7f12-43c4-97e9-71e1226f2843.png)
