@@ -34,5 +34,10 @@ $url = chop($data[$id]); //显示第几行数据,并去除空格;
 header("location:$url"); //直接输出图片链接地址
 } else {
     file_put_contents($image_file,'https://pan.cxr.cool/s/4dmg6z'); //图片库不存在则创建并添加一条图片链接
+    $data = file($image_file); //将文件存放在一个数组中;
+    $num = count($data); //条数;
+    $id = mt_rand(0,$num-1); //随机数字;
+    $url = chop($data[$id]); //显示第几行数据,并去除空格;
+    header("location:$url"); //直接输出图片链接地址
 }
 ?>
