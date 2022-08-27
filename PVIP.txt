@@ -1,4 +1,3 @@
 https://api.cxr.cool/
 https://cxr.cool/
 https://ico.cxr.cool/
-cxr.cool
