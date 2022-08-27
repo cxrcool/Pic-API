@@ -1,6 +1,7 @@
 <?php
 $APIname = 'img API';//API名称
-$image_file = 'img.txt';//图片链接库文件地址
+$image_file = 'img.txt';//图片链接库文件
+$PV = 'pvimg.txt';//调用统计文件
 //调用统计
 if(is_file("PVIP.txt")){
     if($_SERVER['HTTP_REFERER']!=NULL){
@@ -17,12 +18,12 @@ if(is_file("PVIP.txt")){
     file_put_contents("PVIP.txt","");
     error_log(date('Y/m/d H:i:s:').'无PVIP文件，已创建'.PHP_EOL,3, "./log.log");
 }
-if(is_file("pvimg.txt")){
-    $count=file_get_contents("pvimg.txt");
+if(is_file("$PV")){
+    $count=file_get_contents("$PV");
     $count++;
-    file_put_contents("pvimg.txt", $count);
+    file_put_contents("$PV", $count);
 } else {
-    file_put_contents("pvimg.txt",1);
+    file_put_contents("$PV",1);
 }
 //是否存在
 if(file_get_contents($image_file)){
