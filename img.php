@@ -1,7 +1,7 @@
 <?php
-$APIname = 'img';//API名称(如果需要添加更多API基本只需要修改API名称即可)
+$APIname = basename(__FILE__,".php");//API名称(文件名称为该PHP文件名称，例：“img.php”名称为“img”)
 $image_file = $APIname.'.txt';//API图库链接库（默认为API同名txt文件）
-$PV = 'pv'.$APIname.'.txt';//API调用统计文件
+$PV = 'pv'.$APIname.'.txt';//API调用统计文件（默认为API同名txt文件）
 //所有API调用来源统计
 if(is_file("PVIP.txt")){
     if($_SERVER['HTTP_REFERER']!=NULL){//来源地址不为空
