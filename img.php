@@ -1,6 +1,6 @@
 <?php
-$APIname = 'img API';
-$image_file = 'img.txt';
+$APIname = 'img API';//API名称
+$image_file = 'img.txt';//图片链接库文件地址
 //调用统计
 if(is_file("PVIP.txt")){
     if($_SERVER['HTTP_REFERER']!=NULL){
