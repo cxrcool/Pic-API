@@ -20,15 +20,6 @@
         .navbar-inverse .navbar-brand {color: #000000;}
         .navbar-inverse .navbar-nav>li>a {color: #000000;}
     </style>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?9c882d997b00cc4b6a44e7c557710207";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 </head>
 <body class="bg">
 <div class="container bgw">
@@ -71,22 +62,10 @@ var _hmt = _hmt || [];
                 } else {file_put_contents("IP.txt",1);} ?></span></th>
                 <th>调用统计<span class="label label-default">
                 <?php 
-                $pv=file_get_contents("pv.txt");
-                $pvico=file_get_contents("pvico.txt");
                 $pvimg=file_get_contents("pvimg.txt");
-                $pv1=file_get_contents("pv1.txt");
-                $pv2=file_get_contents("pv2.txt");
-                if(is_file("pv.txt")){
-                    $count=$pvico+$pvimg+$pv1+$pv2;
-                    file_put_contents("pv.txt", $count);
-                    echo'共'.$count.'次';}?></span></th>
+                $count=$pvimg;
+                echo'共'.$count.'次';?></span></th>
                     <th>API描述</th>
-            </tr>
-            <tr>
-                <td>网站图标<span class="label label-success">ICO</span></td>
-                <td>https://api.cxr.cool/get.php?url=网站链接</td>
-                <td><?php if(is_file("pvico.txt")){$count=file_get_contents("pvico.txt");echo"$count";}?>次</td>
-                    <td>有无http(s)://皆可，支持ICO;PNG;JPG;GIF;SVG等</td>
             </tr>
             <tr>
                 <td>动漫图库<span class="label label-success">PC</span></td>
@@ -94,26 +73,12 @@ var _hmt = _hmt || [];
                 <td><?php if(is_file("pvimg.txt")){$count=file_get_contents("pvimg.txt");echo"$count";}?>次</td>
                 <td>动漫图片，个人自用，随缘更新</td>
             </tr>
-            <tr>
-                <td>美女图片<span class="label label-success">MO</span></td>
-                <td>https://api.cxr.cool/1.php</td>
-                <td><?php if(is_file("pv1.txt")){$count=file_get_contents("pv1.txt");echo"$count";}?>次</td>
-                <td>第三方图库未做整理</td>
-            </tr>
-            <tr>
-                <td>美女图片<span class="label label-success">PC</span></td>
-                <td>https://api.cxr.cool/2.php</td>
-                <td><?php if(is_file("pv2.txt")){$count=file_get_contents("pv2.txt");echo"$count";}?>次</td>
-                <td>第三方图库未做整理</td>
-            </tr>
         </tbody>
         </table>
 
 <hr><h4>开发日志</h4>
 <pre>
 2022年
-08-23 优化API调用统计记录
-08-18 调整首页内容，新增随机图库API，修复“网站图标”API无法获取SVG图片，及默认图标修改
 08-17 上线使用
 </pre>
 
