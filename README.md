@@ -10,10 +10,12 @@
 ![image](https://user-images.githubusercontent.com/93246862/187047087-233c2e0e-7f12-43c4-97e9-71e1226f2843.png)
 
 ## 文件说明
-- index.php //首页文件【必要】
-- img.php //随机图片API【必要】
-- img.txt //API图片链接库【必要，自动创建】
-- pvimg.txt //API调用统计【自动创建】
-- PVIP.txt //API调用来源记录【自动创建】
-- IP.txt //API调用网站数量【自动创建】
-- log.log //API调用记录【自动创建】
+|文件名|描述|额外|
+|-|-|-|
+|index.php|首页文件|**必要**|
+|img.php|随机图片API|**必要**|
+|img.txt|API图片链接库|**必要，自动创建**|
+|pvimg.txt|API调用统计|自动创建|
+|PVIP.txt|API调用来源记录|自动创建|
+|IP.txt|API调用网站数量|自动创建|
+|log.log|API调用记录|自动创建|
