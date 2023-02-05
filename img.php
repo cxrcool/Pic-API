@@ -5,10 +5,10 @@ $PV = 'pv'.$APIname.'.txt';//API调用统计文件（默认为API同名txt文件
 //所有API调用来源统计
 if(is_file("PVIP.txt")){
     if($_SERVER['HTTP_REFERER']!=NULL){//来源地址不为空
-    $count=$_SERVER['HTTP_REFERER']."000"."\n";
+    $count=$_SERVER['HTTP_REFERER']."\n";
     file_put_contents("PVIP.txt", $count, FILE_APPEND);
     $file=file("PVIP.txt");
-    $file2=preg_replace('/000/', '',$file);
+    $file2=preg_replace('/(http(s)?:\/\/)|(\/.*)/', '',$file);
     $array=array_values(array_unique($file2));
     file_put_contents("PVIP.txt",$array);
     error_log(date('Y/m/d H:i:s:【').$APIname.' API】调用来源：'.$_SERVER['HTTP_REFERER'].PHP_EOL,3, "./log.log");
