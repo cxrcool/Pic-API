@@ -1,5 +1,7 @@
 # Pic-API
 简单的PHP随机图片API
+最新源码请访问
+https://gitee.com/cxr-cool/Pic-API
 ## 使用
 - 下载源码放入网站根目录，访问[域名]即可
 - API地址为`[域名]/img.php`
